@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Registration Page</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="form-container" role="main">
+            <h2>Registration</h2>
+            <form
+                id="registerForm"
+                role="form"
+                aria-labelledby="formTitle"
+                onsubmit="event.preventDefault()"
+            >
+                <input
+                    id="uname"
+                    type="text"
+                    placeholder="Enter Name"
+                    name="uname"
+                    required
+                    aria-label="Username"
+                />
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Enter Email"
+                    name="email"
+                    required
+                    aria-label="Email"
+                />
+                <input
+                    id="psw"
+                    type="password"
+                    placeholder="Enter Password"
+                    name="psw"
+                    required
+                    aria-label="Password"
+                />
+                <input
+                    id="confirmPsw"
+                    type="password"
+                    placeholder="Confirm Password"
+                    name="confirmPsw"
+                    required
+                    aria-label="Confirm Password"
+                />
+                <div class="show-password">
+                    <input
+                        type="checkbox"
+                        id="showPassword"
+                        aria-labelledby="showPasswordLabel"
+                        onclick="togglePasswordVisibility()"
+                    />
+                    <label for="showPassword" id="showPasswordLabel"
+                        >Show Password</label
+                    >
+                </div>
+
+                <div class="terms">
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                        required
+                        aria-labelledby="termsLabel"
+                    />
+                    <label for="terms" id="termsLabel"
+                        >I agree & accept all terms & conditions</label
+                    >
+                </div>
+                <button onclick="registerUser()">Register</button>
+            </form>
+            <div class="link">
+                Have an account already?
+                <a href="login.html" aria-label="Login page">Log in</a>
+            </div>
+        </div>
+        <script src="authentication.js"></script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login Page</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="form-container" role="main">
+            <h2>Login</h2>
+            <form id="loginForm" role="form" aria-labelledby="formTitle">
+                <input
+                    id="uname"
+                    type="text"
+                    placeholder="Enter Name"
+                    name="uname"
+                    required
+                    aria-label="Username"
+                />
+                <input
+                    id="psw"
+                    type="password"
+                    placeholder="Enter Password"
+                    name="psw"
+                    required
+                    aria-label="Password"
+                />
+                <div class="show-password">
+                    <input
+                        type="checkbox"
+                        id="showPassword"
+                        aria-labelledby="showPasswordLabel"
+                        onclick="togglePasswordVisibility()"
+                    />
+                    <label for="showPassword" id="showPasswordLabel"
+                        >Show Password</label
+                    >
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="link">
+                New User?
+                <a href="register.html" aria-label="Sign Up page">Sign Up</a>
+            </div>
+        </div>
+        <script src="authentication.js"></script>
+    </body>
+</html>

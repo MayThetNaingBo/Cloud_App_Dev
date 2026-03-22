@@ -1,0 +1,711 @@
+{
+	"info": {
+		"_postman_id": "f5ea8fae-4bc1-4ac1-bc81-1ed00534ec1c",
+		"name": "CADV API Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31442490"
+	},
+	"item": [
+		{
+			"name": "User Management Service  RDS",
+			"item": [
+				{
+					"name": "Get All Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/user",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register New User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\": \"Tashi1\",\r\n    \"password\": \"jack281122\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/user",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Existing User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_name\": \"Crystal\",\r\n  \"password\": \"mtnb2511\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/login",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_name\": \"Crystal Jane\",\r\n  \"password\": \"mtnb2511\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/user/7",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"user",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all user ids and group ids (user_group)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/user_group",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"user_group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get group details by user id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/gp_by_user/10000001",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"gp_by_user",
+								"10000001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by user id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/user/7",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"user",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/user/3",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"user",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Group Management Service RDS",
+			"item": [
+				{
+					"name": "Get all groups",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/group",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get group details by group id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/group/2",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"group",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all group tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/grouptask",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"grouptask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get group tasks by group task id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/grouptask/2",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"grouptask",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a new group task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"grouptask_id\": \"1004\",\r\n  \"gptask_description\": \"Consists of May, Crystal and Jane\",\r\n  \"gptask_deadline\": \"2024-11-28\",\r\n  \"gptask_status\": \"In Progress\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/grouptask",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"grouptask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a new group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"group_id\": 4,\r\n    \"grouptask_id\":1004,\r\n    \"group_description\": \"IIT TC07 CDAV\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/group",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Group Task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"gptask_description\": \"Updated group task description\",\r\n  \"gptask_deadline\": \"2024-12-31\",\r\n  \"gptask_status\": \"Completed\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/grouptask/2",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"grouptask",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Group",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"group_description\": \"Updated group description\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/group/3",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"group",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Group",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/group/2",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"group",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task Management Service Dynamo DB",
+			"item": [
+				{
+					"name": "User Management Service Dynamo DB",
+					"item": [
+						{
+							"name": "Update user by using username",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_name\": \"Crystal\",\r\n    \"password\": \"NewPassword128\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/user-profile",
+									"protocol": "https",
+									"host": [
+										"6z9boxpal7",
+										"execute-api",
+										"us-east-1",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"user-profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register a user Dynamo DB",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_name\": \"test_user\",\r\n    \"password\": \"TestPassword123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/user-register",
+									"protocol": "https",
+									"host": [
+										"6z9boxpal7",
+										"execute-api",
+										"us-east-1",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"user-register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_name\": \"test_user\",\r\n    \"password\": \"TestPassword123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/user-login",
+									"protocol": "https",
+									"host": [
+										"6z9boxpal7",
+										"execute-api",
+										"us-east-1",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"user-login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"task_id\": \"10007\",\r\n  \"user_id\": \"10001\",\r\n  \"task_deadline\": \"2023-12-31\",\r\n  \"task_description\": \"Updated task description\",\r\n  \"task_status\": \"completed\",\r\n  \"task_title\": \"Updated task title\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/update-task",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"update-task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/task/task123/user456",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"task",
+								"task123",
+								"user456"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"task_id\": \"task123\",\r\n    \"user_id\": \"user456\",\r\n    \"task_title\": \"Complete Project Report\",\r\n    \"task_description\": \"Complete the final report for the project by the end of the week.\",\r\n    \"task_status\": \"in-progress\",\r\n    \"task_deadline\": \"2024-06-30\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/add-task",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"add-task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Group Task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://6z9boxpal7.execute-api.us-east-1.amazonaws.com/grouptask/20000005",
+							"protocol": "https",
+							"host": [
+								"6z9boxpal7",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"grouptask",
+								"20000005"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
